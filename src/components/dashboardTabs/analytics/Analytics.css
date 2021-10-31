@@ -1,0 +1,5 @@
+.analytics {
+  flex: 4;
+  max-width: 100%;
+  overflow-x: auto;
+}

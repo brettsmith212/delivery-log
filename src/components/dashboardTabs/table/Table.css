@@ -1,0 +1,209 @@
+.table-page {
+  flex: 4;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-container {
+  margin-top: 4.8rem;
+  margin-bottom: 30rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+.table-header th {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.table-body td {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: #888;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.table-body .negative {
+  color: #f03e3e;
+}
+
+.table-body .positive {
+  color: #37b24d;
+}
+
+.order-container {
+  display: flex;
+  align-items: center;
+  height: 3.4rem;
+  margin-bottom: 1.2rem;
+}
+
+button.remove {
+  color: #f03e3e;
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0;
+  cursor: pointer;
+
+  padding: 0.8rem;
+  font-size: 0.8rem;
+}
+
+button.remove:hover {
+  background: #f03e3e;
+  color: #fff;
+  transition: 300ms;
+}
+
+button.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11.2rem;
+  height: 2.4rem;
+  font-size: 1.2rem;
+  background: #0099ff;
+  color: #fff;
+  text-align: center;
+  border: 0;
+  padding: 1.4rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+button.order:hover {
+  color: #fff;
+  background-color: #66c2ff;
+  transition: 300ms;
+  font-size: 1.4rem;
+  padding: 1.6rem;
+}
+
+/* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+@media only screen and (max-width: 1180px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    /* padding-bottom: 4.8rem; */
+    margin-bottom: 3.2rem;
+    border-radius: 0.8rem;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:last-child {
+    padding: 0;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    color: #555;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+
+  button.remove {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    border-radius: 0.8rem;
+    background: #f03e3e;
+    color: white;
+    text-align: center;
+  }
+
+  button.remove:hover {
+    background-color: #fff;
+    color: #f03e3e;
+    /* border: 1px solid #f03e3e; */
+    border: none;
+    transition: 300ms;
+  }
+
+  button.order {
+    width: 100%;
+  }
+
+  /*
+      Label the data
+      */
+  td:nth-of-type(1):before {
+    content: "Date";
+  }
+  td:nth-of-type(2):before {
+    content: "Total Time (mins)";
+  }
+  td:nth-of-type(3):before {
+    content: "# of Orders";
+  }
+  td:nth-of-type(4):before {
+    content: "Total Miles";
+  }
+  td:nth-of-type(5):before {
+    content: "MPG";
+  }
+  td:nth-of-type(6):before {
+    content: "Gas Price (est)";
+  }
+  td:nth-of-type(7):before {
+    content: "Gas Cost";
+  }
+  td:nth-of-type(8):before {
+    content: "Miles per Order";
+  }
+  td:nth-of-type(9):before {
+    content: "Cost Per Order";
+  }
+  td:nth-of-type(10):before {
+    content: "Total Pay";
+  }
+  td:nth-of-type(11):before {
+    content: "Cost to Operate";
+  }
+  td:nth-of-type(12):before {
+    content: "Net Pay";
+  }
+  td:nth-of-type(13):before {
+    content: "Net $ / Hr";
+  }
+}

@@ -1,0 +1,48 @@
+.chart-container {
+  margin: 0;
+  padding: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3rem 1fr;
+}
+
+.dropdown-bar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  grid-row: 1 / 2;
+}
+
+.dropdown-primary {
+  width: 20%;
+}
+
+.chart {
+  grid-row: 2 / 3;
+  margin: 0 auto;
+  padding: 3.2rem;
+  width: 100%;
+  overflow: auto;
+}
+
+.test {
+  border: 5px solid red;
+}
+
+@media only screen and (max-width: 768px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .chart-container {
+    padding: 1rem;
+  }
+  .dropdown-bar {
+    justify-content: center;
+  }
+  .dropdown-primary {
+    width: 80%;
+  }
+  Line {
+    width: 100%;
+    height: 100%;
+  }
+}

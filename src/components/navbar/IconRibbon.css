@@ -1,0 +1,126 @@
+:root {
+  --bg: #fff;
+  --bg-accent: #6f6f6f;
+  --text-color: #0099ff;
+  --nav-size: 60px;
+  --border: 1px solid #66c2ff;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
+.topbarIconContainer {
+  padding-right: 2.4rem;
+  /* padding-top: 1.2rem; */
+  grid-column-start: 3;
+  grid-row-start: 1;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.iconBadge {
+  margin-right: 2rem;
+  transform: scale(1.8);
+}
+
+.topAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 65px;
+  width: 300px;
+  transform: translateX(-50%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+
+  transition: height var(--speed) ease;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: var(--text-color);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+
+.menu-item:hover {
+  background-color: #eeeeee;
+}
+.h-6.w-6 {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #0099ff;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+}
+.h-6.w-6:hover {
+  color: #66c2ff;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%), scale(0.9);
+  opacity: 0;
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease, opacity 300ms;
+  opacity: 1;
+}
+.menu-primary-exit {
+  position: absolute;
+  opacity: 1;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%), scale(0.9);
+  transition: all var(--speed) ease, opacity 300ms;
+  opacity: 0;
+}
+
+.menu-secondary-enter {
+  position: absolute;
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit {
+  position: absolute;
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+@media only screen and (max-width: 768px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .iconBadge {
+    transform: scale(1.4);
+  }
+  .topAvatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .dropdown-menu {
+    top: 90px;
+    width: 20rem;
+    transform: translateX(-52%);
+  }
+}
