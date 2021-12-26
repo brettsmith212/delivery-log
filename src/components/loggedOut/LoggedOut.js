@@ -13,7 +13,7 @@ function LoggedOut() {
         <div id="features">
           <div className="showcase">
             <h2>An easier way to monitor and calculate your earnings</h2>
-            <video autoPlay loop>
+            <video autoPlay loop controls>
               <source
                 src={require("../images/tutorial.mov")}
                 type="video/mp4"
