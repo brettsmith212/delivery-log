@@ -28,11 +28,13 @@ const ModalWrapper = styled.div`
   top: 10rem;
   z-index: 10;
   border-radius: 10px;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  /* display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   align-content: center;
-  justify-content: center;
+  justify-content: center; */
   @media only screen and (max-width: 600px),
     (min-device-width: 768px) and (max-device-width: 1024px) {
     max-width: 30rem;

@@ -122,99 +122,99 @@ function Form() {
   };
 
   return (
-    <div>
-      <div className="form active">
-        <div className="form-header">
-          <h2>Add New Dash</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="date">Date:</label>
-          <input
-            ref={dateInputRef}
-            id="date"
-            type="date"
-            value={currentDate}
-            onChange={(e) => setCurrentDate(e.target.value)}
-            required
-          />
-          <label htmlFor="totalTime">Total Time (mins):</label>
-          <input
-            ref={timeInputRef}
-            id="totalTime"
-            type="number"
-            step="0.01"
-            required
-            value={totalTime}
-            onChange={(e) => setTotalTime(e.target.value)}
-          />
-          <label htmlFor="totalOrders">Number of Orders:</label>
-          <input
-            ref={ordersInputRef}
-            id="totalOrders"
-            type="number"
-            step="0.01"
-            required
-            value={totalOrders}
-            onChange={(e) => setTotalOrders(e.target.value)}
-          />
-          <label htmlFor="totalMiles">Total Miles:</label>
-          <input
-            ref={milesInputRef}
-            id="totalMiles"
-            type="number"
-            step="0.01"
-            required
-            value={totalMiles}
-            onChange={(e) => setTotalMiles(e.target.value)}
-          />
-          <label htmlFor="mpg">MPG:</label>
-          <input
-            ref={mpgInputRef}
-            id="mpg"
-            type="number"
-            step="0.01"
-            required
-            value={totalMpg}
-            onChange={(e) => setTotalMpg(e.target.value)}
-          />
-          <label htmlFor="gas">Gas Price per Gal (est):</label>
-          <input
-            ref={gasPriceInputRef}
-            id="gas"
-            type="number"
-            step="0.01"
-            required
-            value={totalGasPrice}
-            onChange={(e) => setTotalGasPrice(e.target.value)}
-          />
-          <label htmlFor="totalPay">Total Pay ($):</label>
-          <input
-            ref={payInputRef}
-            id="totalPay"
-            type="number"
-            step="0.01"
-            required
-            value={totalPay}
-            onChange={(e) => setTotalPay(e.target.value)}
-          />
-          {!isLoading && <button className="button-toggle">Add Dash</button>}
-          {isLoading && (
-            <div className="center">
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-              <div className="wave"></div>
-            </div>
-          )}
-        </form>
+    // <div>
+    <div className="form active">
+      <div className="form-header">
+        <h2>Add New Dash</h2>
       </div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="date">Date:</label>
+        <input
+          ref={dateInputRef}
+          id="date"
+          type="date"
+          value={currentDate}
+          onChange={(e) => setCurrentDate(e.target.value)}
+          required
+        />
+        <label htmlFor="totalTime">Total Time (mins):</label>
+        <input
+          ref={timeInputRef}
+          id="totalTime"
+          type="number"
+          step="0.01"
+          required
+          value={totalTime}
+          onChange={(e) => setTotalTime(e.target.value)}
+        />
+        <label htmlFor="totalOrders">Number of Orders:</label>
+        <input
+          ref={ordersInputRef}
+          id="totalOrders"
+          type="number"
+          step="0.01"
+          required
+          value={totalOrders}
+          onChange={(e) => setTotalOrders(e.target.value)}
+        />
+        <label htmlFor="totalMiles">Total Miles:</label>
+        <input
+          ref={milesInputRef}
+          id="totalMiles"
+          type="number"
+          step="0.01"
+          required
+          value={totalMiles}
+          onChange={(e) => setTotalMiles(e.target.value)}
+        />
+        <label htmlFor="mpg">MPG:</label>
+        <input
+          ref={mpgInputRef}
+          id="mpg"
+          type="number"
+          step="0.01"
+          required
+          value={totalMpg}
+          onChange={(e) => setTotalMpg(e.target.value)}
+        />
+        <label htmlFor="gas">Gas Price per Gal (est):</label>
+        <input
+          ref={gasPriceInputRef}
+          id="gas"
+          type="number"
+          step="0.01"
+          required
+          value={totalGasPrice}
+          onChange={(e) => setTotalGasPrice(e.target.value)}
+        />
+        <label htmlFor="totalPay">Total Pay ($):</label>
+        <input
+          ref={payInputRef}
+          id="totalPay"
+          type="number"
+          step="0.01"
+          required
+          value={totalPay}
+          onChange={(e) => setTotalPay(e.target.value)}
+        />
+        {!isLoading && <button className="button-toggle">Add Dash</button>}
+        {isLoading && (
+          <div className="center">
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+          </div>
+        )}
+      </form>
     </div>
+    // </div>
   );
 }
 

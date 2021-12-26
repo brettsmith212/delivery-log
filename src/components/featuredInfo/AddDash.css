@@ -1,13 +1,17 @@
 .form {
   display: none;
-  max-width: 40rem;
+  /* max-width: 40rem; */
+  width: 60rem;
   margin: 0 auto;
   padding: 2.4rem;
   text-align: center;
+  height: 70rem;
+  position: absolute;
 }
 
 .active {
-  display: block;
+  display: flex;
+  flex-direction: column;
   max-width: 40rem;
   margin: 0 auto;
   padding: 2.4rem;
@@ -187,6 +191,10 @@ ion-icon:active {
 
 @media only screen and (max-width: 600px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
+  .form {
+    width: 25rem;
+  }
+
   .form h2 {
     font-size: 2.4rem;
   }
