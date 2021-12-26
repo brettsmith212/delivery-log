@@ -35,6 +35,7 @@
 
 .sidebarListItem.active,
 .sidebarListItem:hover {
+  flex-direction: row;
   background-color: #e9ecef;
   color: #0099ff;
   margin: 0;
